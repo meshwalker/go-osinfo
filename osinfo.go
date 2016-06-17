@@ -86,6 +86,7 @@ func (osd *OSDetails) Read() error {
 				if osd.Unknown == nil {
 					osd.Unknown = make(map[string]string)
 				}
+				values[0] = strings.Title(strings.ToLower(values[0]))
 				osd.Unknown[values[0]] = values[1]
 			}
 
